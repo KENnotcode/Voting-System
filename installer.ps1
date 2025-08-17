@@ -1,6 +1,6 @@
 # Set variables
 $repoUrl = "https://github.com/KENnotcode/Voting-System.git"
-$targetFolder = "$env:USERPROFILE\Voting-System"
+$targetFolder = "$env:USERPROFILE\Downloads\Voting-System"
 
 Write-Host "📥 Cloning Voting System repository..." -ForegroundColor Cyan
 
