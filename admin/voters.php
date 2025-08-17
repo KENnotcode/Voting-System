@@ -29,11 +29,24 @@ if(isset($_FILES['voters_json']) && $_FILES['voters_json']['error'] == UPLOAD_ER
   }else{
     $_SESSION['error'] = "Invalid JSON format.";
   }
-  // Redirect to avoid resubmission
   header('Location: voters.php');
   exit();
 }
 include 'includes/header.php';
+?>
+
+<?php
+if(isset($_POST['clear_voters'])){
+  include 'includes/conn.php';
+  $sql = "DELETE FROM voters";
+  if($conn->query($sql)){
+    $_SESSION['success'] = "All voters have been cleared.";
+  }else{
+    $_SESSION['error'] = "Failed to clear voters.";
+  }
+  header('Location: voters.php');
+  exit();
+}
 ?>
 <body class="hold-transition skin-blue sidebar-mini">
 <div class="wrapper">
@@ -90,6 +103,24 @@ include 'includes/header.php';
           <div class="box">
             <div class="box-header with-border">
               <a href="#addnew" data-toggle="modal" class="btn btn-primary btn-sm btn-flat"><i class="fa fa-plus"></i> New</a>
+              <form method="post" style="display:inline-block; margin-left:10px;" onsubmit="return confirm('Are you sure you want to clear all voters?');">
+                <input type="hidden" name="clear_voters" value="1">
+                <button type="submit" class="btn btn-danger btn-sm btn-flat"><i class="fa fa-trash"></i> Clear Voters</button>
+              </form>
+<?php
+// Handle Clear Voters action
+if(isset($_POST['clear_voters'])){
+  include 'includes/conn.php';
+  $sql = "DELETE FROM voters";
+  if($conn->query($sql)){
+    $_SESSION['success'] = "All voters have been cleared.";
+  }else{
+    $_SESSION['error'] = "Failed to clear voters.";
+  }
+  header('Location: voters.php');
+  exit();
+}
+?>
             </div>
             <div class="box-body">
               <table id="example1" class="table table-bordered">
