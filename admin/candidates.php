@@ -1,3 +1,50 @@
+<?php
+// Handle Remove Candidates action
+if(isset($_POST['remove_candidates'])){
+  include 'includes/conn.php';
+  $sql = "DELETE FROM candidates";
+  if($conn->query($sql)){
+    $_SESSION['success'] = "Success!<br>All candidates removed successfully.";
+  }else{
+    $_SESSION['error'] = "Error!<br>Failed to remove candidates.";
+  }
+  header('Location: candidates.php');
+  exit();
+}
+
+// Handle Import Candidates from JSON
+if(isset($_FILES['candidates_json']) && $_FILES['candidates_json']['error'] == UPLOAD_ERR_OK){
+  include 'includes/conn.php';
+  $jsonData = file_get_contents($_FILES['candidates_json']['tmp_name']);
+  $candidates = json_decode($jsonData, true);
+  if(is_array($candidates)){
+    $imported = 0;
+    $failed = 0;
+    foreach($candidates as $cand){
+      $firstname = isset($cand['firstname']) ? $conn->real_escape_string($cand['firstname']) : '';
+      $lastname = isset($cand['lastname']) ? $conn->real_escape_string($cand['lastname']) : '';
+      $position_id = isset($cand['position_id']) ? intval($cand['position_id']) : 0;
+      $platform = isset($cand['platform']) ? $conn->real_escape_string($cand['platform']) : '';
+      $photo = isset($cand['photo']) ? $conn->real_escape_string($cand['photo']) : '';
+      if($firstname && $lastname && $position_id){
+        $sql = "INSERT INTO candidates (firstname, lastname, position_id, platform, photo) VALUES ('$firstname', '$lastname', '$position_id', '$platform', '$photo')";
+        if($conn->query($sql)){
+          $imported++;
+        }else{
+          $failed++;
+        }
+      }else{
+        $failed++;
+      }
+    }
+    $_SESSION['success'] = "Success!<br>Imported $imported candidates. Failed: $failed.";
+  }else{
+    $_SESSION['error'] = "Error!<br>Invalid JSON format.";
+  }
+  echo '<meta http-equiv="refresh" content="0;url=candidates.php">';
+  exit();
+}
+?>
 <?php include 'includes/session.php'; ?>
 <?php include 'includes/header.php'; ?>
 <body class="hold-transition skin-blue sidebar-mini">
@@ -20,6 +67,14 @@
     </section>
     <!-- Main content -->
     <section class="content">
+      <div class="row">
+        <div class="col-xs-12">
+          <form id="importForm" method="post" enctype="multipart/form-data" style="display:inline-block; margin-left:10px;">
+            <input type="file" name="candidates_json" accept="application/json" style="display:inline-block;" required>
+            <button type="submit" class="btn btn-info btn-sm btn-flat"><i class="fa fa-upload"></i> Import JSON</button>
+          </form>
+        </div>
+      </div>
       <?php
         if(isset($_SESSION['error'])){
           echo "
@@ -41,12 +96,36 @@
           ";
           unset($_SESSION['success']);
         }
+        if(isset($_SESSION['notify'])){
+          echo "
+            <div class='alert alert-info alert-dismissible'>
+              <button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;</button>
+              <h4><i class='icon fa fa-info'></i> Notification!</h4>
+              ".$_SESSION['notify']."
+            </div>
+          ";
+          unset($_SESSION['notify']);
+        }
+        if(isset($_SESSION['remove'])){
+          echo "
+            <div class='alert alert-warning alert-dismissible'>
+              <button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;</button>
+              <h4><i class='icon fa fa-trash'></i> Removed!</h4>
+              ".$_SESSION['remove']."
+            </div>
+          ";
+          unset($_SESSION['remove']);
+        }
       ?>
       <div class="row">
         <div class="col-xs-12">
           <div class="box">
             <div class="box-header with-border">
               <a href="#addnew" data-toggle="modal" class="btn btn-primary btn-sm btn-flat"><i class="fa fa-plus"></i> New</a>
+              <form method="post" style="display:inline-block; margin-left:10px;" onsubmit="return confirm('Are you sure you want to remove all candidates?');">
+                <input type="hidden" name="remove_candidates" value="1">
+                <button type="submit" class="btn btn-danger btn-sm btn-flat"><i class="fa fa-trash"></i> Remove Candidates</button>
+              </form>
             </div>
             <div class="box-body">
               <table id="example1" class="table table-bordered">
