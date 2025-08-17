@@ -1,4 +1,41 @@
-<?php include 'includes/session.php'; ?>
+<?php
+include 'includes/session.php';
+// Handle JSON import for positions
+if(isset($_FILES['positions_json']) && $_FILES['positions_json']['error'] == UPLOAD_ERR_OK){
+  include 'includes/conn.php';
+  $jsonData = file_get_contents($_FILES['positions_json']['tmp_name']);
+  $positions = json_decode($jsonData, true);
+  if(is_array($positions)){
+    $imported = 0;
+    $failed = 0;
+    // Get current max priority
+    $sql = "SELECT priority FROM positions ORDER BY priority DESC LIMIT 1";
+    $query = $conn->query($sql);
+    $row = $query->fetch_assoc();
+    $priority = $row ? $row['priority'] : 0;
+    foreach($positions as $pos){
+      $description = isset($pos['description']) ? $conn->real_escape_string($pos['description']) : '';
+      $max_vote = isset($pos['max_vote']) ? intval($pos['max_vote']) : 1;
+      $priority++;
+      if($description){
+        $sql = "INSERT INTO positions (description, max_vote, priority) VALUES ('$description', '$max_vote', '$priority')";
+        if($conn->query($sql)){
+          $imported++;
+        }else{
+          $failed++;
+        }
+      }else{
+        $failed++;
+      }
+    }
+    $_SESSION['success'] = "Imported $imported positions. Failed: $failed.";
+  }else{
+    $_SESSION['error'] = "Invalid JSON format.";
+  }
+  header('Location: positions.php');
+  exit();
+}
+?>
 <?php include 'includes/header.php'; ?>
 <body class="hold-transition skin-blue sidebar-mini">
 <div class="wrapper">
@@ -43,6 +80,12 @@
         }
       ?>
       <div class="row">
+        <div class="col-xs-12">
+          <form id="importForm" method="post" enctype="multipart/form-data" style="display:inline-block; margin-left:10px;">
+            <input type="file" name="positions_json" accept="application/json" style="display:inline-block;" required>
+            <button type="submit" class="btn btn-info btn-sm btn-flat"><i class="fa fa-upload"></i> Import JSON</button>
+          </form>
+        </div>
         <div class="col-xs-12">
           <div class="box">
             <div class="box-header with-border">
