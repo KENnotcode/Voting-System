@@ -1,4 +1,18 @@
 <?php
+// Handle Clear Positions action
+if(isset($_POST['clear_positions'])){
+  include 'includes/conn.php';
+  $sql = "DELETE FROM positions";
+  if($conn->query($sql)){
+    $_SESSION['success'] = "All positions have been cleared.";
+  }else{
+    $_SESSION['error'] = "Failed to clear positions.";
+  }
+  header('Location: positions.php');
+  exit();
+}
+?>
+<?php
 include 'includes/session.php';
 // Handle JSON import for positions
 if(isset($_FILES['positions_json']) && $_FILES['positions_json']['error'] == UPLOAD_ERR_OK){
@@ -90,6 +104,24 @@ if(isset($_FILES['positions_json']) && $_FILES['positions_json']['error'] == UPL
           <div class="box">
             <div class="box-header with-border">
               <a href="#addnew" data-toggle="modal" class="btn btn-primary btn-sm btn-flat"><i class="fa fa-plus"></i> New</a>
+              <form method="post" style="display:inline-block; margin-left:10px;" onsubmit="return confirm('Are you sure you want to clear all positions?');">
+                <input type="hidden" name="clear_positions" value="1">
+                <button type="submit" class="btn btn-danger btn-sm btn-flat"><i class="fa fa-trash"></i> Clear Positions</button>
+              </form>
+<?php
+// Handle Clear Positions action
+if(isset($_POST['clear_positions'])){
+  include 'includes/conn.php';
+  $sql = "DELETE FROM positions";
+  if($conn->query($sql)){
+    $_SESSION['success'] = "All positions have been cleared.";
+  }else{
+    $_SESSION['error'] = "Failed to clear positions.";
+  }
+  header('Location: positions.php');
+  exit();
+}
+?>
             </div>
             <div class="box-body">
               <table id="example1" class="table table-bordered">
