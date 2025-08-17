@@ -34,6 +34,9 @@ while ($row = $query->fetch_assoc()) {
         $votes = $vquery->fetch_assoc()['votes'];
         $content .= '<tr><td>' . htmlspecialchars($crow['lastname']) . ', ' . htmlspecialchars($crow['firstname']) . '</td><td>' . $votes . '</td></tr>';
     }
+    if($row['description'] == 'Public Relations Officer') {
+        $content .= '<div style="page-break-before: always;"></div>';
+    }
 }
 $content .= '</table>';
 
@@ -43,4 +46,3 @@ $pdf->AddPage();
 $pdf->SetFont('helvetica', '', 11);
 $pdf->writeHTML($content);
 $pdf->Output('election_result.pdf', 'I');
-?>
