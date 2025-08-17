@@ -1,0 +1,170 @@
+[
+  {
+    "firstname": "John",
+    "lastname": "Doe",
+    "position_id": 68,
+    "platform": "For a transparent presidency.",
+    "photo": "john_doe.jpg"
+  },
+  {
+    "firstname": "Jane",
+    "lastname": "Smith",
+    "position_id": 68,
+    "platform": "Leadership and unity.",
+    "photo": "jane_smith.jpg"
+  },
+  {
+    "firstname": "Alice",
+    "lastname": "Brown",
+    "position_id": 69,
+    "platform": "Strong vice presidency.",
+    "photo": "alice_brown.jpg"
+  },
+  {
+    "firstname": "Bob",
+    "lastname": "Johnson",
+    "position_id": 69,
+    "platform": "Support and teamwork.",
+    "photo": "bob_johnson.jpg"
+  },
+  {
+    "firstname": "Carol",
+    "lastname": "Davis",
+    "position_id": 70,
+    "platform": "Efficient secretarial work.",
+    "photo": "carol_davis.jpg"
+  },
+  {
+    "firstname": "Eve",
+    "lastname": "Miller",
+    "position_id": 70,
+    "platform": "Organized records.",
+    "photo": "eve_miller.jpg"
+  },
+  {
+    "firstname": "Frank",
+    "lastname": "Wilson",
+    "position_id": 71,
+    "platform": "Responsible financial management.",
+    "photo": "frank_wilson.jpg"
+  },
+  {
+    "firstname": "Grace",
+    "lastname": "Moore",
+    "position_id": 71,
+    "platform": "Transparent treasury.",
+    "photo": "grace_moore.jpg"
+  },
+  {
+    "firstname": "Hank",
+    "lastname": "Taylor",
+    "position_id": 72,
+    "platform": "Accurate auditing.",
+    "photo": "hank_taylor.jpg"
+  },
+  {
+    "firstname": "Ivy",
+    "lastname": "Anderson",
+    "position_id": 72,
+    "platform": "Integrity in audits.",
+    "photo": "ivy_anderson.jpg"
+  },
+  {
+    "firstname": "Jack",
+    "lastname": "Thomas",
+    "position_id": 73,
+    "platform": "Business growth.",
+    "photo": "jack_thomas.jpg"
+  },
+  {
+    "firstname": "Kate",
+    "lastname": "Martin",
+    "position_id": 73,
+    "platform": "Entrepreneurial spirit.",
+    "photo": "kate_martin.jpg"
+  },
+  {
+    "firstname": "Leo",
+    "lastname": "Clark",
+    "position_id": 74,
+    "platform": "Effective information dissemination.",
+    "photo": "leo_clark.jpg"
+  },
+  {
+    "firstname": "Mia",
+    "lastname": "Lopez",
+    "position_id": 74,
+    "platform": "Clear communication.",
+    "photo": "mia_lopez.jpg"
+  },
+  {
+    "firstname": "Nina",
+    "lastname": "Scott",
+    "position_id": 75,
+    "platform": "Strong public relations.",
+    "photo": "nina_scott.jpg"
+  },
+  {
+    "firstname": "Oscar",
+    "lastname": "Young",
+    "position_id": 75,
+    "platform": "Community engagement.",
+    "photo": "oscar_young.jpg"
+  },
+  {
+    "firstname": "Paul",
+    "lastname": "King",
+    "position_id": 76,
+    "platform": "Order and discipline.",
+    "photo": "paul_king.jpg"
+  },
+  {
+    "firstname": "Quinn",
+    "lastname": "Wright",
+    "position_id": 76,
+    "platform": "Safety and respect.",
+    "photo": "quinn_wright.jpg"
+  },
+  {
+    "firstname": "Rita",
+    "lastname": "Evans",
+    "position_id": 77,
+    "platform": "SHS representation.",
+    "photo": "rita_evans.jpg"
+  },
+  {
+    "firstname": "Sam",
+    "lastname": "Baker",
+    "position_id": 77,
+    "platform": "Voice for SHS.",
+    "photo": "sam_baker.jpg"
+  },
+  {
+    "firstname": "Tina",
+    "lastname": "Perez",
+    "position_id": 78,
+    "platform": "SHS representation.",
+    "photo": "tina_perez.jpg"
+  },
+  {
+    "firstname": "Uma",
+    "lastname": "Carter",
+    "position_id": 78,
+    "platform": "Support for SHS.",
+    "photo": "uma_carter.jpg"
+  },
+  {
+    "firstname": "Victor",
+    "lastname": "Morgan",
+    "position_id": 79,
+    "platform": "College representation.",
+    "photo": "victor_morgan.jpg"
+  },
+  {
+    "firstname": "Wendy",
+    "lastname": "Bell",
+    "position_id": 79,
+    "platform": "Voice for college students.",
+    "photo": "wendy_bell.jpg"
+  }
+]

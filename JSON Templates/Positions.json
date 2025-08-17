@@ -1,0 +1,62 @@
+[
+  {
+    "_comment": 0,
+    "description": "President",
+    "max_vote": 1
+  },
+  {
+    "_comment": 1,
+    "description": "Vice President",
+    "max_vote": 1
+  },
+  {
+    "_comment": 2,
+    "description": "Secretary",
+    "max_vote": 1
+  },
+  {
+    "_comment": 3,
+    "description": "Treasurer",
+    "max_vote": 1
+  },
+  {
+    "_comment": 4,
+    "description": "Auditor",
+    "max_vote": 1
+  },
+  {
+    "_comment": 5,
+    "description": "Business Manager",
+    "max_vote": 1
+  },
+  {
+    "_comment": 6,
+    "description": "Public Information Officer",
+    "max_vote": 1
+  },
+  {
+    "_comment": 7,
+    "description": "Public Relations Officer",
+    "max_vote": 1
+  },
+  {
+    "_comment": 8,
+    "description": "Sergaent at Arms",
+    "max_vote": 1
+  },
+  {
+    "_comment": 9,
+    "description": "SHS Representative",
+    "max_vote": 1
+  },
+  {
+    "_comment": 10,
+    "description": "SHS Representative",
+    "max_vote": 1
+  },
+  {
+    "_comment": 11,
+    "description": "College Representative",
+    "max_vote": 1
+  }
+]
