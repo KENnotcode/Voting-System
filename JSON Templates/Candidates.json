@@ -1,170 +1,184 @@
 [
   {
-    "firstname": "John",
-    "lastname": "Doe",
-    "position_id": 68,
-    "platform": "For a transparent presidency.",
-    "photo": "john_doe.jpg"
+    "firstname": "John Lloyd",
+    "lastname": "Dauba (HOPE Partylist)",
+    "position_id": 20,
+    "platform": "For the new learning environment.",
+    "photo": "HOPE/PRES.jpg"
   },
   {
-    "firstname": "Jane",
-    "lastname": "Smith",
-    "position_id": 68,
-    "platform": "Leadership and unity.",
-    "photo": "jane_smith.jpg"
+    "firstname": "Leeann",
+    "lastname": "Leaño (AIM Partylist)",
+    "position_id": 20,
+    "platform": "At the very beginning I am trained to be a good leader and having a passion to lead and set clear vision and goals.",
+    "photo": "AIM/PRESIDENT.jpg"
   },
   {
-    "firstname": "Alice",
-    "lastname": "Brown",
-    "position_id": 69,
-    "platform": "Strong vice presidency.",
-    "photo": "alice_brown.jpg"
+    "firstname": "Cleofe",
+    "lastname": "Alico (HOPE Partylist)",
+    "position_id": 21,
+    "platform": "I want to run as Vice President because I want to be a good leaders to them and I believe I can be a strong voice for the students, help positive changes.",
+    "photo": "HOPE/Vice-pres.jpg"
   },
   {
-    "firstname": "Bob",
-    "lastname": "Johnson",
-    "position_id": 69,
-    "platform": "Support and teamwork.",
-    "photo": "bob_johnson.jpg"
+    "firstname": "Allan James",
+    "lastname": "Sales (AIM Partylist)",
+    "position_id": 21,
+    "platform": "To lead, serve and make a difference in my school's community by listening to student's needs and working towards creating a better environment for everyone.",
+    "photo": "AIM/VPRESIDENT.jpg"
   },
   {
-    "firstname": "Carol",
-    "lastname": "Davis",
-    "position_id": 70,
-    "platform": "Efficient secretarial work.",
-    "photo": "carol_davis.jpg"
+    "firstname": "Sherellyn",
+    "lastname": "Cariq (HOPE Partylist)",
+    "position_id": 22,
+    "platform": "I want to run as SSC Secretary because I want to be a good listener to all the student in STI and also I want them to trust me as one of the SSC members.",
+    "photo": "HOPE/secretary_.jpg"
   },
   {
-    "firstname": "Eve",
-    "lastname": "Miller",
-    "position_id": 70,
-    "platform": "Organized records.",
-    "photo": "eve_miller.jpg"
+    "firstname": "Adriana Carel",
+    "lastname": "Legaspi (AIM Partylist)",
+    "position_id": 22,
+    "platform": "I want to run as Secretary because I believe that being Secretary will allow me to use my skills in keeping accurate records and documenting meetings. I want to contribute to the success of our projects and activities by being reliable and attentive details.",
+    "photo": "AIM/SECRETARY.jpg"
   },
   {
-    "firstname": "Frank",
-    "lastname": "Wilson",
-    "position_id": 71,
-    "platform": "Responsible financial management.",
-    "photo": "frank_wilson.jpg"
+    "firstname": "Jayhan Novie",
+    "lastname": "Bonguit (HOPE Partylist)",
+    "position_id": 23,
+    "platform": "I want to run as representative of SSC officer because I want to be good listener, a good member to them. I value that I uphold to gain their trust.",
+    "photo": "HOPE/treasurer.jpg"
   },
   {
-    "firstname": "Grace",
-    "lastname": "Moore",
-    "position_id": 71,
-    "platform": "Transparent treasury.",
-    "photo": "grace_moore.jpg"
+    "firstname": "Mary Gabrielle",
+    "lastname": "Angelio (AIM Partylist)",
+    "position_id": 23,
+    "platform": "I am passionate about managing finances effectively and transparently. If I were to be the Treasurer of the SSC organization, I'll ensure accurate financial reporting and to support the organization's mission and goals. I'm eager to run for the position to contribute my skills and to help thrive and achieve the goals effectively.",
+    "photo": "AIM/TREASURER.jpg"
   },
   {
-    "firstname": "Hank",
-    "lastname": "Taylor",
-    "position_id": 72,
-    "platform": "Accurate auditing.",
-    "photo": "hank_taylor.jpg"
+    "firstname": "Lolito",
+    "lastname": "Caamud Jr. (HOPE Partylist)",
+    "position_id": 24,
+    "platform": "Honesty actions in everywhere.",
+    "photo": "HOPE/auditor.jpg"
   },
   {
-    "firstname": "Ivy",
-    "lastname": "Anderson",
-    "position_id": 72,
-    "platform": "Integrity in audits.",
-    "photo": "ivy_anderson.jpg"
+    "firstname": "Princess Cecelia",
+    "lastname": "Ricalde (AIM Partylist)",
+    "position_id": 24,
+    "platform": "I want to be an Auditor because I enjoy andlying details, solving, and helping organization improve their processes.",
+    "photo": "AIM/AUDITOR.jpg"
   },
   {
-    "firstname": "Jack",
-    "lastname": "Thomas",
-    "position_id": 73,
-    "platform": "Business growth.",
-    "photo": "jack_thomas.jpg"
+    "firstname": "Erwin Jr.",
+    "lastname": "Comedia (HOPE Partylist)",
+    "position_id": 25,
+    "platform": "I want to help.",
+    "photo": "HOPE/business_manager.jpg"
   },
   {
-    "firstname": "Kate",
-    "lastname": "Martin",
-    "position_id": 73,
-    "platform": "Entrepreneurial spirit.",
-    "photo": "kate_martin.jpg"
+    "firstname": "Maxine",
+    "lastname": "Lobo (AIM Partylist)",
+    "position_id": 25,
+    "platform": "I will run as a business manager for our partylist who will no longer make promises but will do everything best.",
+    "photo": "AIM/BUSINESS.jpg"
   },
   {
-    "firstname": "Leo",
-    "lastname": "Clark",
-    "position_id": 74,
-    "platform": "Effective information dissemination.",
-    "photo": "leo_clark.jpg"
+    "firstname": "Nesthy Sherane",
+    "lastname": "Mabini (HOPE Partylist)",
+    "position_id": 26,
+    "platform": "I want to run as a SSC Officer, because I want to be heard the voice of every student here in STI and to improve our school.",
+    "photo": "HOPE/P.I.O.jpg"
   },
   {
-    "firstname": "Mia",
-    "lastname": "Lopez",
-    "position_id": 74,
-    "platform": "Clear communication.",
-    "photo": "mia_lopez.jpg"
+    "firstname": "Erlindaniel",
+    "lastname": "Nuevo (AIM Partylist)",
+    "position_id": 26,
+    "platform": "I want to run as an officer to give peace and to manage the asseminating information to the public.",
+    "photo": "AIM/PIO.jpg"
   },
   {
-    "firstname": "Nina",
-    "lastname": "Scott",
-    "position_id": 75,
-    "platform": "Strong public relations.",
-    "photo": "nina_scott.jpg"
+    "firstname": "MC Grady",
+    "lastname": "Villa (HOPE Partylist)",
+    "position_id": 27,
+    "platform": "Because I want to challenge myself a little.",
+    "photo": "HOPE/P.I.O.jpg"
   },
   {
-    "firstname": "Oscar",
-    "lastname": "Young",
-    "position_id": 75,
-    "platform": "Community engagement.",
-    "photo": "oscar_young.jpg"
+    "firstname": "Lewreen Vincent",
+    "lastname": "Meregildo (AIM Partylist)",
+    "position_id": 27,
+    "platform": "Running as an officer of the SSC is a huge task and a heavy responsibility, but I believe that I have the skills to fulfill my task.",
+    "photo": "AIM/PRO.jpg"
   },
   {
-    "firstname": "Paul",
-    "lastname": "King",
-    "position_id": 76,
-    "platform": "Order and discipline.",
-    "photo": "paul_king.jpg"
+    "firstname": "Jhoncel",
+    "lastname": "Aribas (HOPE Partylist)",
+    "position_id": 28,
+    "platform": "To make change.",
+    "photo": "HOPE/SGT at arms.jpg"
   },
   {
-    "firstname": "Quinn",
-    "lastname": "Wright",
-    "position_id": 76,
-    "platform": "Safety and respect.",
-    "photo": "quinn_wright.jpg"
+    "firstname": "John Paul Carl",
+    "lastname": "Baylen (AIM Partylist)",
+    "position_id": 28,
+    "platform": "To present bullying and empowering the respect of all the school facilitators. Socializing to our/my fubordinate and giving the school premises an accessable flux.",
+    "photo": "AIM/SGA.jpg"
   },
   {
-    "firstname": "Rita",
-    "lastname": "Evans",
-    "position_id": 77,
-    "platform": "SHS representation.",
-    "photo": "rita_evans.jpg"
+    "firstname": "Asheley",
+    "lastname": "Boroc (HOPE Partylist)",
+    "position_id": 29,
+    "platform": "As an SSC Officer, you can contribute to positive changes in the school community, such as improving student life, officers ensure that students voices are heard and represented is school decision making processes.",
+    "photo": "HOPE/SHS_Represent_-11.jpg"
   },
   {
-    "firstname": "Sam",
-    "lastname": "Baker",
-    "position_id": 77,
-    "platform": "Voice for SHS.",
-    "photo": "sam_baker.jpg"
+    "firstname": "Janella",
+    "lastname": "Pedradoja (AIM Partylist)",
+    "position_id": 29,
+    "platform": "I am running for SSC Representative to be the voice of my fellow G11 Students. I aim to bring fresh perspectives and address our concerns effectively. I am commited to promoting a possitive and inclusive school environment where everyone feels heard and valued.",
+    "photo": "AIM/G11.jpg"
   },
   {
-    "firstname": "Tina",
-    "lastname": "Perez",
-    "position_id": 78,
-    "platform": "SHS representation.",
-    "photo": "tina_perez.jpg"
+    "firstname": "Angelo",
+    "lastname": "Felizario (HOPE Partylist)",
+    "position_id": 30,
+    "platform": "The reason why I'm running for the 2025/2026 SSC Election is to gain experience, develop leadership opportunities, and share my skills and passion for serving as a possitive role model for my fellow students.",
+    "photo": "HOPE/SHS_representative-12.jpg"
   },
   {
-    "firstname": "Uma",
-    "lastname": "Carter",
-    "position_id": 78,
-    "platform": "Support for SHS.",
-    "photo": "uma_carter.jpg"
+    "firstname": "Marcia",
+    "lastname": "Manggay (AIM Partylist)",
+    "position_id": 30,
+    "platform": "I want to run as Grade 12 Representative of the SSC because I want to be a voice for my fellow students, and I want to serve, inpire, and leave a positive impact before we graduate.",
+    "photo": "AIM/G12.jpg"
   },
   {
-    "firstname": "Victor",
-    "lastname": "Morgan",
-    "position_id": 79,
-    "platform": "College representation.",
-    "photo": "victor_morgan.jpg"
+    "firstname": "Kristopher Dave",
+    "lastname": "Bindoy (HOPE Partylist)",
+    "position_id": 31,
+    "platform": "For the new learning environment.",
+    "photo": "HOPE/1st year representative_.jpg"
   },
   {
-    "firstname": "Wendy",
-    "lastname": "Bell",
-    "position_id": 79,
-    "platform": "Voice for college students.",
-    "photo": "wendy_bell.jpg"
+    "firstname": "Gabriella",
+    "lastname": "Dumayan (AIM Partylist)",
+    "position_id": 31,
+    "platform": "Starting college is a big transition, and I want to help create a welcoming, supporting environment where students feel connected and informed. I'm ready to listen to my peers, bring their ideas to the table, and work with the council to make our first year memorable, engaging, and successful for everyone.",
+    "photo": "AIM/COLLEGE1.jpg"
+  },
+  {
+    "firstname": "Michael",
+    "lastname": "Pedradoja (HOPE Partylist)",
+    "position_id": 32,
+    "platform": "I want to be your 2nd Year Representative to be your voice and help improve our school together.",
+    "photo": "HOPE/COLLEG REPRESENTATIVE HRS-2B.jpg"
+  },
+  {
+    "firstname": "Quennie",
+    "lastname": "Dela Buena (AIM Partylist)",
+    "position_id": 32,
+    "platform": "To be part of SSC is to advocate for student. I want to be a strong voice for my fellow student ensuring their concern also.",
+    "photo": "AIM/COLLEGE2.jpg"
   }
 ]

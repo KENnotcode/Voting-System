@@ -1,8 +1,10 @@
 <?php
 require_once('../tcpdf/tcpdf.php');
 
+
+
 // Database connection
-$conn = new mysqli('localhost', 'root', '', 'votesystem');
+$conn = new mysqli('localhost', 'root', '', 'stivoting');
 if ($conn->connect_error) {
     die('Database connection failed: ' . $conn->connect_error);
 }
@@ -42,6 +44,7 @@ $content .= '</table>';
 
 // Generate PDF
 $pdf = new TCPDF();
+$pdf->SetTitle('Tally Results');
 $pdf->AddPage();
 $pdf->SetFont('helvetica', '', 11);
 $pdf->writeHTML($content);

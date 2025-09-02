@@ -5,18 +5,8 @@
 		$id = $_POST['id'];
 		$firstname = $_POST['firstname'];
 		$lastname = $_POST['lastname'];
-		$password = $_POST['password'];
-
-		$sql = "SELECT * FROM voters WHERE id = $id";
-		$query = $conn->query($sql);
-		$row = $query->fetch_assoc();
-
-		if($password == $row['password']){
-			$password = $row['password'];
-		}
-		else{
-			$password = password_hash($password, PASSWORD_DEFAULT);
-		}
+		// Always use STI_(LASTNAME) as password regardless of what was entered
+		$password = 'STI_' . strtoupper($lastname);
 
 		$sql = "UPDATE voters SET firstname = '$firstname', lastname = '$lastname', password = '$password' WHERE id = '$id'";
 		if($conn->query($sql)){

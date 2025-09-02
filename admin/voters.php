@@ -12,8 +12,9 @@ if(isset($_FILES['voters_json']) && $_FILES['voters_json']['error'] == UPLOAD_ER
       $lastname = isset($voter['Lastname']) ? $conn->real_escape_string($voter['Lastname']) : '';
       $firstname = isset($voter['Firstname']) ? $conn->real_escape_string($voter['Firstname']) : '';
       $photo = isset($voter['Photo']) ? $conn->real_escape_string($voter['Photo']) : '';
-      $password = isset($voter['Password']) ? password_hash($voter['Password'], PASSWORD_DEFAULT) : '';
-  $voters_id = 'STI_' . $lastname;
+      // Use STI_(LASTNAME) as password instead of hashing the provided password
+      $password = 'STI_' . strtoupper($lastname);
+      $voters_id = $voter['voters_id'] ?? $voter['Student ID'] ?? '';
       if($lastname && $firstname && $password){
         $sql = "INSERT INTO voters (lastname, firstname, photo, password, voters_id) VALUES ('$lastname', '$firstname', '$photo', '$password', '$voters_id')";
         if($conn->query($sql)){

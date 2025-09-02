@@ -30,6 +30,9 @@ if(isset($_FILES['candidates_json']) && $_FILES['candidates_json']['error'] == U
         $sql = "INSERT INTO candidates (firstname, lastname, position_id, platform, photo) VALUES ('$firstname', '$lastname', '$position_id', '$platform', '$photo')";
         if($conn->query($sql)){
           $imported++;
+          // Store partylist information in session for display
+          $partylist = isset($cand['partylist']) ? $cand['partylist'] : '';
+          $_SESSION['candidate_partylist'][$conn->insert_id] = $partylist;
         }else{
           $failed++;
         }
@@ -153,7 +156,7 @@ if(isset($_FILES['candidates_json']) && $_FILES['candidates_json']['error'] == U
                             <a href='#edit_photo' data-toggle='modal' class='pull-right photo' data-id='".$row['canid']."'><span class='fa fa-edit'></span></a>
                           </td>
                           <td>".$row['firstname']."</td>
-                          <td>".$row['lastname']."</td>
+                          <td>".$row['lastname']." ".(isset($_SESSION['candidate_partylist'][$row['canid']]) && $_SESSION['candidate_partylist'][$row['canid']] ? "(".$_SESSION['candidate_partylist'][$row['canid']].")" : "")."</td>
                           <td><a href='#platform' data-toggle='modal' class='btn btn-info btn-sm btn-flat platform' data-id='".$row['canid']."'><i class='fa fa-search'></i> View</a></td>
                           <td>
                             <button class='btn btn-success btn-sm edit btn-flat' data-id='".$row['canid']."'><i class='fa fa-edit'></i> Edit</button>

@@ -6,40 +6,7 @@
 -- Generation Time: May 18, 2018 at 07:34 AM
 -- Server version: 10.1.31-MariaDB
 -- PHP Version: 7.1.15
--- Voting System SQL Schema
--- This will create the tables needed for a basic voting system
 
-CREATE TABLE IF NOT EXISTS positions (
-  id INT AUTO_INCREMENT PRIMARY KEY,
-  description VARCHAR(255) NOT NULL,
-  priority INT DEFAULT 0
-);
-
-CREATE TABLE IF NOT EXISTS candidates (
-  id INT AUTO_INCREMENT PRIMARY KEY,
-  position_id INT NOT NULL,
-  lastname VARCHAR(100) NOT NULL,
-  firstname VARCHAR(100) NOT NULL,
-  photo VARCHAR(255),
-  FOREIGN KEY (position_id) REFERENCES positions(id) ON DELETE CASCADE
-);
-
-CREATE TABLE IF NOT EXISTS voters (
-  id INT AUTO_INCREMENT PRIMARY KEY,
-  lastname VARCHAR(100) NOT NULL,
-  firstname VARCHAR(100) NOT NULL,
-  photo VARCHAR(255),
-  password VARCHAR(255) NOT NULL,
-  voters_id VARCHAR(100) NOT NULL UNIQUE
-);
-
-CREATE TABLE IF NOT EXISTS votes (
-  id INT AUTO_INCREMENT PRIMARY KEY,
-  voter_id INT NOT NULL,
-  candidate_id INT NOT NULL,
-  FOREIGN KEY (voter_id) REFERENCES voters(id) ON DELETE CASCADE,
-  FOREIGN KEY (candidate_id) REFERENCES candidates(id) ON DELETE CASCADE
-);
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
 START TRANSACTION;
@@ -52,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `votesystem`
+-- Database: `stivoting`
 --
 
 -- --------------------------------------------------------
@@ -76,7 +43,7 @@ CREATE TABLE `admin` (
 --
 
 INSERT INTO `admin` (`id`, `username`, `password`, `firstname`, `lastname`, `photo`, `created_on`) VALUES
-(1, 'Kenneth', '$2y$10$fLK8s7ZDnM.1lE7XMP.J6OuPbQ.DPUVKBo7rENnQY7gYq0xAzsKJy', 'Kenneth', 'Cubilo', '', '2018-04-02');
+(1, 'nurhodelta', '$2y$10$fLK8s7ZDnM.1lE7XMP.J6OuPbQ.DPUVKBo7rENnQY7gYq0xAzsKJy', 'Neovic', 'Devierte', 'facebook-profile-image.jpeg', '2018-04-02');
 
 -- --------------------------------------------------------
 

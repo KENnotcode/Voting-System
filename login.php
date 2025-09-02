@@ -14,7 +14,10 @@
 		}
 		else{
 			$row = $query->fetch_assoc();
-			if(password_verify($password, $row['password'])){
+			// Check if password matches the format STI_(LASTNAME)
+			$expected_password = 'STI_' . strtoupper($row['lastname']);
+			
+			if($password === $expected_password){
 				$_SESSION['voter'] = $row['id'];
 			}
 			else{

@@ -16,11 +16,12 @@
   	</div>
   
   	<div class="login-box-body">
-    	<p class="login-box-msg">Sign in to start your session</p>
+    	<p class="login-box-msg">Sign in using your STUDENT ID</p>
+    	<p class="login-box-msg">Password is STI_YOUR LASTNAME</p>
 
     	<form action="login.php" method="POST">
       		<div class="form-group has-feedback">
-        		<input type="text" class="form-control" name="voter" placeholder="Voter's ID" required>
+        		<input type="text" class="form-control" name="voter" placeholder="Student ID" required>
         		<span class="glyphicon glyphicon-user form-control-feedback"></span>
       		</div>
           <div class="form-group has-feedback">

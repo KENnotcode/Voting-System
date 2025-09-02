@@ -24,10 +24,18 @@
                     </div>
                 </div>
                 <div class="form-group">
+                    <label for="voter_id" class="col-sm-3 control-label">Student ID</label>
+
+                    <div class="col-sm-9">
+                      <input type="text" class="form-control" id="voter_id" name="voter_id" required>
+                    </div>
+                </div>
+                <div class="form-group">
                     <label for="password" class="col-sm-3 control-label">Password</label>
 
                     <div class="col-sm-9">
-                      <input type="password" class="form-control" id="password" name="password" required>
+                      <input type="password" class="form-control" id="password" name="password" value="STI_LASTNAME" disabled>
+                      <small class="text-muted">Password will be automatically set to STI_LASTNAME</small>
                     </div>
                 </div>
                 <div class="form-group">

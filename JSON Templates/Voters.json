@@ -3,12 +3,12 @@
     "Firstname": "Juan",
     "Lastname": "Dela Cruz",
     "Password": "password123",
-    "Photo": "C:\\Users\\kenne\\Downloads\\PhotoRef.webp"
+    "Photo": "../images/female.png"
   },
   {
     "Firstname": "Maria",
     "Lastname": "Reyes",
     "Password": "password123",
-    "Photo": "C:\\Users\\kenne\\Downloads\\PhotoRef.webp"
+    "Photo": "../images/male.png"
   }
 ]
